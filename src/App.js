@@ -6,7 +6,7 @@ const foodILike = [
     id:1,
     name: "Kimchi",
     image:"https://m.jnmall.kr/web/product/big/201910/4b83072de272a51edffa420ab3b2fa98.jpg",
-    rating: 5
+    rating: 5.0
   },
   {
     id:2,
@@ -27,8 +27,10 @@ function Food({name, picture, rating}){
 }
 
 Food.propTypes = {
-
-}
+  name: PropTypes.string.isRequired,
+  picture: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired
+};
 
 function App() {
   return (
